@@ -1,0 +1,156 @@
+﻿.navigation {
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 100%;
+    height: auto;
+}
+
+.homeheaders {
+    color: #32d064;
+}
+
+/* style of the footer*/
+footer {
+    background-color: #000000;
+    color: #fff; /* color of the text in footer */
+    padding: 20px; /* footer thicknes */
+    position: relative;
+    text-align: center;
+    margin-top: 5%;
+    bottom: 0;
+    width: 100%;
+}
+
+/* style of the Visitalia in footer*/
+footer b {
+    font-size: large;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #32d064; /* color */
+    padding: 10px;
+}
+
+.custom-border {
+    border: 2px solid #343a40;
+    border-radius: 3%;
+    margin: 30px;
+}
+
+/* custom margin for the headers on the page */
+.display-4 {
+    margin: 50px;
+}
+
+/* log in adn sign up forms design */
+.form-check-label {
+    align-items: center;
+}
+
+.form-floating {
+    width: 100%; /* width of the log in boxes */
+    margin: 0 auto; /* to align form into center */
+}
+
+    .form-floating label {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .form-floating a {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 5%;
+    }
+
+.form-check {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+    .form-check p {
+        margin-left: 36%;
+    }
+
+    .form-check male {
+        margin-left: 90px;
+        margin-right: 40px;
+    }
+
+/* style of the mail in contact us */
+.text-danger a {
+    color: #d26252;
+    text-decoration: none; /* to remove underline */
+}
+
+    .text-danger a:hover {
+        color: black; /* when pointer on the mail, it makes it black*/
+    }
+
+
+/* image slide  */
+.image-slide {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: #32d064;
+}
+
+    .swiper-button-prev:hover, .swiper-button-next:hover {
+        color: red;
+    }
+
+.swiper-pagination-bullet-active {
+    background-color: #32d064;
+}
+
+.swiper-pagination-bullet:hover {
+    background-color: red;
+}
+
+.swiper {
+    width: 40%;
+    height: fit-content;
+}
+
+.col .swiper {
+    width: 100%;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+/* Tours List */
+.tour-info .available {
+    color: green;
+}
+
+.tour-info .unavailable {
+    color: red;
+}
+
+section img {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+    section img:hover {
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+
+/*Hidden Wisam*/
+.hidden-image {
+    opacity: 0; /* Görünmez yap */
+    transition: opacity 5s ease; /* Yumuşak geçiş için */
+    width: 100%; /* Resmin genişliğini kapsayıcıya göre ayarla */
+    height: 100%; /* Resmin yüksekliğini kapsayıcıya göre ayarla */
+}
+
+.image-container:hover .hidden-image {
+    opacity: 1; /* Fare üzerine gelince görünür yap */
+}

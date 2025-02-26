@@ -1,0 +1,23 @@
+﻿@using Microsoft.AspNet.Identity
+
+@{
+    var email = User.Identity.GetUserName();
+    var atIndex = email.IndexOf('@');
+    var usernamePart = atIndex >= 0 ? email.Substring(0, atIndex) : email;
+}
+
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+
+        @Html.ActionLink(usernamePart, "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "btn btn-secondary mx-2" })
+        <a class="btn btn-secondary mx-2" href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+    }
+}
+else
+{
+    @Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-secondary mx-2" })
+    @Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class = "btn btn-secondary mx-2" })
+}

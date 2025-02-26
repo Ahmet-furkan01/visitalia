@@ -1,0 +1,218 @@
+﻿<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@{
+    ViewBag.Title = "Contact";
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="~/Scripts/ContactForm.js"></script>
+
+<main>
+    <div class="py-5 text-center">
+        <div class="d-flex flex-column align-items-center justify-content-center">
+            <img class="d-block mb-4" src="~/Images/visitalia.png" alt="Visitalia" width="200">
+            <h2>Contact Form</h2>
+            <p class="lead">If you want to contact us for any further information please fill the form below.</p>
+        </div>
+    </div>
+
+    <div class="col-md-7 col-lg-8 mx-auto">
+        <h4 class="mb-3">Contact Us</h4>
+        <form id="contactForm" class="needs-validation" novalidate>
+            <div class="row g-3">
+                <div class="col-sm-6">
+                    <label for="firstName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="firstName" required>
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="lastName" class="form-label">Surname</label>
+                    <input type="text" class="form-control" id="lastName" required>
+                    <div class="invalid-feedback">
+                        Valid last name is required.
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="email" class="form-label">Email <span class="text-body-secondary">(Required)</span></label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="invalid-feedback">
+                        Please enter a valid email.
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <label for="phone" class="form-label">Phone Number (Optional)</label>
+                    <input type="number" class="form-control" id="phone">
+                    <div class="invalid-feedback">
+                        Phone Number required.
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea type="text" class="form-control" id="message" required></textarea>
+                    <div class="invalid-feedback">
+                        Your message required.
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="save-info">
+                <label class="form-check-label" for="save-info">I confirm that I have shared my information with Visitalia.</label>
+            </div>
+            <br />
+            <button class="w-100 btn btn-primary btn-lg" type="submit">Send the Form</button>
+        </form>
+        <div id="message-form" style="display: none;">
+            <h3 class="text-center text-success">Thank you, we have received your contact form.</h3>
+        </div>
+    </div>
+    <br /><br /><br /><br /><br />
+    <h3 class="text-center text-danger">Our Social Medias</h3>
+    <br /><br />
+    <div class="social-icons">
+        <ul>
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+    <br /><br /><br /><br /><br />
+</main>
+
+<style>
+    .social-icons {
+        position: relative;
+        margin-top: 50px;
+    }
+
+        .social-icons ul {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+            .social-icons ul li {
+                list-style: none;
+                margin: 0 40px;
+            }
+
+                .social-icons ul li .fa {
+                    font-size: 40px;
+                    color: #262626;
+                    line-height: 80px;
+                    transition: .5s;
+                }
+
+                .social-icons ul li a {
+                    position: relative;
+                    display: block;
+                    width: 80px;
+                    height: 80px;
+                    background-color: #fff;
+                    text-align: center;
+                    transform: perspective(100px) rotate(-30deg) skew(25deg) translate(0, 0);
+                    transition: .5s;
+                    box-shadow: -20px 20px 10px rgb(0, 0, 0, 0.5);
+                }
+
+                    .social-icons ul li a::before {
+                        content: "";
+                        position: absolute;
+                        top: 10px;
+                        left: -20px;
+                        height: 100%;
+                        width: 20px;
+                        background: #b1b1b1;
+                        transition: .5s;
+                        transform: rotate(0deg) skewY(-45deg);
+                    }
+
+                    .social-icons ul li a::after {
+                        content: "";
+                        position: absolute;
+                        top: 80px;
+                        left: -11px;
+                        height: 20px;
+                        width: 100%;
+                        background: #b1b1b1;
+                        transition: .5s;
+                        transform: rotate(0deg) skewX(-45deg);
+                    }
+
+                    .social-icons ul li a:hover {
+                        transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+                        box-shadow: -50px 50px 50px rgb(0, 0, 0, 0.5);
+                    }
+
+                .social-icons ul li:hover .fa {
+                    color: #fff;
+                }
+
+                .social-icons ul li:hover:nth-child(1) a {
+                    background: #3b5999;
+                }
+
+                    .social-icons ul li:hover:nth-child(1) a:before {
+                        background: #2e4a86;
+                    }
+
+                    .social-icons ul li:hover:nth-child(1) a:after {
+                        background: #4a69ad;
+                    }
+
+                .social-icons ul li:hover:nth-child(2) a {
+                    background: #55acee;
+                }
+
+                    .social-icons ul li:hover:nth-child(2) a:before {
+                        background: #4184b7;
+                    }
+
+                    .social-icons ul li:hover:nth-child(2) a:after {
+                        background: #4d9fde;
+                    }
+
+                .social-icons ul li:hover:nth-child(3) a {
+                    background: #dd4b39;
+                }
+
+                    .social-icons ul li:hover:nth-child(3) a:before {
+                        background: #c13929;
+                    }
+
+                    .social-icons ul li:hover:nth-child(3) a:after {
+                        background: #e83322;
+                    }
+
+                .social-icons ul li:hover:nth-child(4) a {
+                    background: #0077B5;
+                }
+
+                    .social-icons ul li:hover:nth-child(4) a:before {
+                        background: #036aa0;
+                    }
+
+                    .social-icons ul li:hover:nth-child(4) a:after {
+                        background: #0d82bf;
+                    }
+
+                .social-icons ul li:hover:nth-child(5) a {
+                    background: linear-gradient(#400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+                }
+
+                    .social-icons ul li:hover:nth-child(5) a:before {
+                        background: linear-gradient(#400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+                    }
+
+                    .social-icons ul li:hover:nth-child(5) a:after {
+                        background: linear-gradient(#400080, transparent), linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+                    }
+</style>

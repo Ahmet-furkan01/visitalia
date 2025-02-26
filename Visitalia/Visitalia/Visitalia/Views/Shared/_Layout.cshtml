@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.2/lux/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="~/Content/Style.css">
+    <script src="~/Scripts/ImageSlider.js" defer></script>
+    <script src="~/Scripts/selectCity.js" defer></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitalia</title>
+
+</head>
+<body>
+    <div class="navigation">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+            <div class="col-md-3 mb-2 mb-md-0">
+                <a href="~/Home/Index" class="d-inline-flex link-body-emphasis text-decoration-none">
+                    <img src="~/Images/visitalia.png" width="120" class="custom-border">
+                </a>
+            </div>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="~/Home/Index" class="btn btn-secondary mx-2">Home</a></li>
+                <li><a href="~/Home/TourList" class="btn btn-secondary mx-2">Tours</a></li>
+                <li><a href="~/Home/About" class="btn btn-secondary mx-2">About Us</a></li>
+                <li><a href="~/Home/Contact" class="btn btn-secondary mx-2">Contact Us</a></li>
+            </ul>
+
+            <div class="col-md-3 text-end">
+                @Html.Partial("_LoginPartial")
+            </div>
+        </header>
+    </div>
+
+    @RenderBody()
+
+    <footer>
+        <b>Visitalia</b>
+        &copy; @DateTime.Now.Year All rights reserved.
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
